@@ -13,5 +13,16 @@ gradle-app.setting
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
 
-# .idea/下は環境ごとの設定がありそうなので変更するとハマりそう
+# app/src、README以外は設定っぽいから無視する
+# .idea/は環境ごとの設定がありそうなので変更するとハマりそう
 .idea/
+
+app/.gitignore
+app/build.gradle
+app/proguard-rules.pro
+gradle/
+build.gradle
+gradle.properties
+gradlew
+gradlew.bat
+settings.gradle
