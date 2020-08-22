@@ -5,7 +5,7 @@ public class MainProcess {
     private PlayerManagement playerManage;
     private final int FASE_NUM = 3;
 
-    void mainGameLoop(){
+    public void mainGameLoop(){
         /***
             ゲームのメインループ処理
          ***/
@@ -17,7 +17,7 @@ public class MainProcess {
         }
     }
 
-    boolean doThreeFase(){
+    private boolean doThreeFase(){
         /***
          3フェーズ処理する
          ***/
@@ -33,7 +33,7 @@ public class MainProcess {
         return isGameEnd;
     }
 
-    boolean doOneFase(){
+    private boolean doOneFase(){
         /***
          1フェーズの処理
          ***/
