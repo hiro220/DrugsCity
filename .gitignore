@@ -16,6 +16,7 @@ gradle-app.setting
 # app/src、README以外は設定っぽいから無視する
 # .idea/は環境ごとの設定がありそうなので変更するとハマりそう
 .idea/
+.idea/caches/
 
 app/.gitignore
 app/build.gradle
@@ -26,3 +27,4 @@ gradle.properties
 gradlew
 gradlew.bat
 settings.gradle
+.DS_Store
