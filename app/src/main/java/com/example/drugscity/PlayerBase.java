@@ -22,9 +22,7 @@ public class PlayerBase {
         currentAction = action;
     }
 
-    public void setTurn(String drugname) {
-        drug = drugname;
-    }
+    public void setTurn(int turn) { turnNum = turn; }
 
     public String getDrug() {
         return drug;
