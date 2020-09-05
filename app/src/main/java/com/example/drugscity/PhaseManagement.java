@@ -16,7 +16,7 @@ public class PhaseManagement {
 
         for(int i = 0; i < playerList.size(); i++) {
             //脱落したプレイヤーだったら飛ばす
-            if(playerList.get(i).isDead){
+            if(playerList.get(i).isDead()){
                 continue;
             }
 
@@ -25,4 +25,14 @@ public class PhaseManagement {
         }
     }
 
+    void doAction(ArrayList<PlayerBase> playerList){
+        /***
+         引数のplayerListにセットされている順番通りに各自選んだアクションを実行する
+         ***/
+
+        for(int i = 0; i < playerList.size(); i++) {
+
+
+        }
+    }
 }
