@@ -4,6 +4,7 @@ public class PlayerBase {
     private String drug;  //プレイヤーの選択した麻薬
     private String currentAction;  //プレイヤーの選択したアクション
     private int    turnNum;  //プレイヤーの行動順
+    private boolean isDead; //プレイヤーが脱落したかどうか
 
     //プレイヤーが使用する麻薬を選択する
     public void selectDrug() {
@@ -13,6 +14,7 @@ public class PlayerBase {
     public void selectAction() {
     }
 
+    public boolean isDead() { return isDead; }
 
     public void setDrug(String drugname) {
         drug = drugname;
