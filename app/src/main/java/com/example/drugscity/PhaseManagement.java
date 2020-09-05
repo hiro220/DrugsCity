@@ -16,12 +16,13 @@ public class PhaseManagement {
 
         for(int i = 0; i < playerList.size(); i++) {
             //脱落したプレイヤーだったら飛ばす
-            if(playerList.get(i).dead){
+            if(playerList.get(i).isDead){
                 continue;
             }
 
-            playerList.get(i).turnNum = cnt;
+            playerList.get(i).setTurn(cnt);
             cnt++;
         }
     }
+
 }
