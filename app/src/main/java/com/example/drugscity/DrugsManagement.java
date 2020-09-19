@@ -13,7 +13,7 @@ public class DrugsManagement {
             }
 
             if(targetDrug.equals(playerList.get(i).getDrug())){
-                //仮
+                //仮　
                 return "○○がtargetDrugを使用しています";
             }
         }
