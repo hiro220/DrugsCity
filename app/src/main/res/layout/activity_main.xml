@@ -6,13 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <!-- 画面上部 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 各種infomation -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <!-- 現在のターン -->
+                    <TextView
+                        android:id="@+id/turnTextArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/turnLabel"/>
+                    <!-- 汎用テキストエリア -->
+                    <TextView
+                        android:id="@+id/freeTextArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_weight="2"
+                        android:text="@string/freeText" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <!-- 現在のフェーズ -->
+                    <TextView
+                        android:id="@+id/faseTextArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/phaseLabel"/>
+                    <!-- 自分の麻薬 -->
+                    <TextView
+                        android:id="@+id/myDrugTextArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:text="@string/turnLabel"/>
+                </TableRow>
+            </TableLayout>
+
+            <!-- 他プレイヤー情報 -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </TableLayout>
+        </LinearLayout>
+
+        <!-- 画面下部 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- アクションログ -->
+
+            <!-- アクション・麻薬選択画面 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!-- アクション一覧 -->
+                <!-- 麻薬一覧 -->
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

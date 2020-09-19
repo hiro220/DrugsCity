@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">DrugsCity</string>
+    <string name="turnLabel">ターン</string>
+    <string name="phaseLabel">フェーズ</string>
+    <string name="freeText">汎用テキストエリア</string>
 </resources>
