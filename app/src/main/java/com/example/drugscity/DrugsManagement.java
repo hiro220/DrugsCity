@@ -1,23 +1,24 @@
 package com.example.drugscity;
 
+
 public class DrugsManagement {
 
-    String checkDrugs(ArrayList<PlayerBase> playerList, String targetDrug){
-        /**
-         * 引数のtargetDrugを持つplayerがいるか確認して、Stringで返す関数
-         */
+    private String[][] choseList = new String[9][2];
 
-        for(int i = 0; i < playerList.size(); i++){
-            if(playerList.get(i).isDead()){
-                continue;
-            }
-
-            if(targetDrug.equals(playerList.get(i).getDrug())){
-                //仮　
-                return "○○がtargetDrugを使用しています";
-            }
-        }
-        //仮
-        return "いません";
+    void addChoseDrug(String addDrug, int i){
+        choseList[i][0] = addDrug;
     }
+
+    void addResult(String addResult, int i){
+        choseList[i][1] = addResult;
+    }
+
+    String getChoseDrug(int i){
+        return choseList[i][0];
+    }
+
+    String getResult(int i){
+        return choseList[i][1];
+    }
+
 }
