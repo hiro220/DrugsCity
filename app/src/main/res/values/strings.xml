@@ -3,4 +3,14 @@
     <string name="turnLabel">ターン : </string>
     <string name="phaseLabel">フェーズ : </string>
     <string name="mydrug">麻薬 : </string>
+    <string name="mazai">魔剤</string>
+    <string name="grass">草</string>
+    <string name="powderMint">スパイダーミント</string>
+    <string name="mouse">マウス</string>
+    <string name="smokyAroma">スモーキーアロマ</string>
+    <string name="joker">ジョーカー</string>
+    <string name="spiderDrug">スパイダードラッグ</string>
+    <string name="peridot">ペリドット</string>
+    <string name="nShot">nShot</string>
+    <string name="lifeBug">ライフバグ</string>
 </resources>
