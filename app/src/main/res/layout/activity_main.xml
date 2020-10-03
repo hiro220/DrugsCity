@@ -10,13 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <!-- 画面上部 -->
         <!-- 各種infomation -->
+        <!-- 現在のターン -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <!-- 現在のターン -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -27,11 +26,12 @@
                 android:layout_height="wrap_content"
                 android:text="0" />
         </LinearLayout>
+
+        <!-- 汎用テキストエリア -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <!-- 汎用テキストエリア -->
             <TextView
                 android:id="@+id/freeTextArea"
                 android:layout_width="wrap_content"
@@ -39,8 +39,9 @@
                 android:layout_gravity="end"
                 android:layout_weight="2"
                 android:text="ここに一時的な情報を表示する" />
-
         </LinearLayout>
+
+        <!-- 現在のフェーズ -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,10 +55,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0" />
-            <!-- 現在のフェーズ -->
-            <!-- 自分の麻薬 -->
-
         </LinearLayout>
+
+        <!-- 自分の麻薬 -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,9 +72,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ここに自分の麻薬を表示する"/>
-
         </LinearLayout>
-            <!-- 他プレイヤー情報 -->
+
+        <!-- 他プレイヤー情報 -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,23 +86,30 @@
                 android:text="プレイヤー1"/>
         </LinearLayout>
 
-        <!-- 画面下部 -->
+        <!-- アクションログ -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <!-- アクションログ -->
 
-            <!-- アクション・麻薬選択画面 -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="152dp"
-                android:orientation="vertical">
-                <!-- アクション一覧 -->
+        </LinearLayout>
 
-                <!-- 麻薬一覧 -->
+        <!-- アクション・麻薬選択画面 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="152dp"
+            android:orientation="vertical">
+            <!-- アクション一覧 -->
+
+            <!-- 麻薬一覧 -->
+
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
