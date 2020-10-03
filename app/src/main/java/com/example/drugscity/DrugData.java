@@ -43,17 +43,9 @@ public class DrugData {
     public static final String addlifeBugDefCon[] = {"1"};
 
     //drugデータの作成
-    public static final DrugDataFrame mazai = new DrugDataFrame(mazaiName, mazaiDefCon, addmazaiDefCon);
-    public static final DrugDataFrame grass = new DrugDataFrame(grassName, grassDefCon, addgrassDefCon);
-    public static final DrugDataFrame powder = new DrugDataFrame(powderMintName, powderMintDefCon, addpowderMintDefCon);
-    public static final DrugDataFrame mouse = new DrugDataFrame(mouseName, mouseDefCon, addmouseDefCon);
-    public static final DrugDataFrame smoky = new DrugDataFrame(smokyAromaName, smokyAromaDefCon, addsmokyAromaDefCon);
-    public static final DrugDataFrame joker = new DrugDataFrame(jokerName, jokerDefCon, addjokerDefCon);
-    public static final DrugDataFrame spider = new DrugDataFrame(spiderDrugName, spiderDefCon, addspiderDefCon);
-    public static final DrugDataFrame peridot = new DrugDataFrame(peridotName, peridotDefCon, addperidotDefCon);
-    public static final DrugDataFrame nShot = new DrugDataFrame(nShotName, nShotDefCon, addnShotDefCon);
-    public static final DrugDataFrame lifebug = new DrugDataFrame(lifeBugName, lifeBugDefCon, addlifeBugDefCon);
-
+    DrugData(String drugName, String defeatCondition[], String addDefeatCondition[]) {
+        DrugDataFrame drug = new DrugDataFrame(drugName, defeatCondition, addDefeatCondition);
+    }
 }
 
 private class DrugDataFrame {
