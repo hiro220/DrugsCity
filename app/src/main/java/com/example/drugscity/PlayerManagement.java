@@ -14,6 +14,9 @@ public class PlayerManagement extends AppCompatActivity {
     cpu_player c4 = new cpu_player();
 
     //プレイヤーのアクション管理のインスタンス
+    PhaseManagement phase = new  PhaseManagement();
+
+    //役職確認のインスタンス
 
 
     @Override
