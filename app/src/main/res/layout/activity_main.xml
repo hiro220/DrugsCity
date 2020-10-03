@@ -10,59 +10,80 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <!-- 画面上部 -->
+        <!-- 各種infomation -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
+            <!-- 現在のターン -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/turnLabel" />
+            <TextView
+                android:id="@+id/turnTextArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- 汎用テキストエリア -->
+            <TextView
+                android:id="@+id/freeTextArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="2"
+                android:text="ここに一時的な情報を表示する" />
 
-            <!-- 各種infomation -->
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <!-- 現在のターン -->
-                    <TextView
-                        android:id="@+id/turnTextArea"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/turnLabel"/>
-                    <!-- 汎用テキストエリア -->
-                    <TextView
-                        android:id="@+id/freeTextArea"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="end"
-                        android:layout_weight="2"
-                        android:text="@string/freeText" />
-                </TableRow>
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <!-- 現在のフェーズ -->
-                    <TextView
-                        android:id="@+id/faseTextArea"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/phaseLabel"/>
-                    <!-- 自分の麻薬 -->
-                    <TextView
-                        android:id="@+id/myDrugTextArea"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="end"
-                        android:text="@string/turnLabel"/>
-                </TableRow>
-            </TableLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phaseLabel" />
+            <TextView
+                android:id="@+id/faseTextArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
+            <!-- 現在のフェーズ -->
+            <!-- 自分の麻薬 -->
 
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mydrug"/>
+
+            <TextView
+                android:id="@+id/myDrugTextArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ここに自分の麻薬を表示する"/>
+
+        </LinearLayout>
             <!-- 他プレイヤー情報 -->
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            </TableLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="プレイヤー1"/>
         </LinearLayout>
 
         <!-- 画面下部 -->
@@ -74,10 +95,11 @@
 
             <!-- アクション・麻薬選択画面 -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="152dp"
                 android:orientation="vertical">
                 <!-- アクション一覧 -->
+
                 <!-- 麻薬一覧 -->
 
             </LinearLayout>
