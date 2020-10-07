@@ -2,9 +2,9 @@ import java.util.Stack;
 
 public class DefeatCondition {
 
-    public Stack<String> drugOrigin;   //敗北条件を元の状態に戻すためのデータ
-    public DrugDataFrame drugStatus;
-    private Stack DrugdataBuf;         //一時的に敗北条件を退避させるためのバッファ
+    public DrugDataFrame drugStatus;     //敗北条件を管理する
+    public Stack<String> popedDrugBuf;   //popされた敗北条件のデータを保存するバッファ
+    private Stack DrugdataBuf;         //ドラッグ追加時に一時的に敗北条件を退避させるためのバッファ
 
     DefeatCondition(DrugDataFrame drugData) {
         drugOrigin = drugData.defCondition;
@@ -12,15 +12,32 @@ public class DefeatCondition {
     }
 
     //攻撃が有効か判定し、敗北したかどうかを返す
-    public judgeAttack(String attackName) {
+    public int judgeAttack(String attackName) {
+        //攻撃判定
         if(drugStatus.defCondition.peek() == attackName) {
-            drugStatus.pop();
+            popedDrugBuf.push(drugStatus.pop());
+        } else {
+            while(popedDrugBuf.empty() != true) {
+                drugStatus.push(popedDrugBuf.pop());
+            }
         }
 
-        if(drugStatus.empty) {
+        //敗北判定
+        if(drugStatus.empty()) {
             return 1;
         } else {
             return 0;
+        }
+    }
+
+    //守る選択で敗北条件を追加
+    public void addDrugCon() {
+        while(drugStatus.empty() != true) {
+            DrugdataBuf.push(drugStatus.pop());
+        }
+        drugStatus.push(drugStatus.addDefCon);
+        while(DrugdataBuf.empty()) {
+            DrugStatus.push(DrugdataBuf.pop());
         }
     }
 }
