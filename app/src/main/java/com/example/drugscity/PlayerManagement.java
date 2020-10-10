@@ -1,47 +1,69 @@
 package com.example.drugscity;
 
+import android.util.Log;
+
 public class PlayerManagement {
+    private fianal String TAG = "PlayerManagement";
+
     //プレイヤーのインスタンス
-    player p1 = new player();
+    private Player player = new Player();
 
     //CPUのインスタンス
-    cpu_player c1 = new cpu_player();
-    cpu_player c2 = new cpu_player();
-    cpu_player c3 = new cpu_player();
-    cpu_player c4 = new cpu_player();
+    private CpuPlayer cpu1 = new CpuPlayer();
+    private CpuPlayer cpu2 = new CpuPlayer();
+    private CpuPlayer cpu3 = new CpuPlayer();
+    private CpuPlayer cpu4 = new CpuPlayer();
 
     //プレイヤーのアクション管理のインスタンス
-    PhaseManagement phase = new PhaseManagement();
+    private PhaseManagement phaseManage = new PhaseManagement();
 
     //役職管理のインスタンス
-    DrugData drug = new DrugData();
+    private DrugsManagement drug = new DrugsManagement();
 
-    //ターン開始時に各プレイヤーが受けたアクションをリセットする
     public void actionReset(){
-
+        /***
+         ターン開始時に各プレイヤーが受けたアクションをリセットする
+         ***/
+        Log.i(TAG, "actionReset: ");
     }
-
-    //アクションの処理順序を決定し、各プレイヤーに自分のアクション処理順序を伝える
+    
     public void decideActionSequence(){
-
+        /***
+         アクションの処理順序を決定し、各プレイヤーに自分のアクション処理順序を伝える
+         ***/
+        Log.i(TAG, "decideActionSequence: ");
+    
     }
-    //各プレイヤーに行うアクションを決定するように通知する
+
     public void decideAllAction(){
+        /***
+         各プレイヤーに行うアクションを決定するように通知する
+         ***/
+        Log.i(TAG, "decideAllAction: ");
 
     }
 
-    //事前に決定した順序で各プレイヤーが決めたアクションを処理していく
     public void doAction(){
+        /***
+         事前に決定した順序で各プレイヤーが決めたアクションを処理していく
+         ***/
+        Log.i(TAG, "doAction: ");
 
     }
 
-    //現時点で残っているプレイヤーの人数を確かめ、1人のみならTrueをリターンする。 そうでないならFalseをリターンする
     public void isGameEnd(){
+        /***
+         現時点で残っているプレイヤーの人数を確かめ、1人のみならTrueをリターンする。 そうでないならFalseをリターンする
+         ***/
+        Log.i(TAG, "isGameEnd: ");
 
     }
 
-    //各プレイヤーに確認したい麻薬を選択してもらい、該当するプレイヤーがいるならそのプレイヤーを、いないなら誰もいない旨を伝える
     public void checkDrug(){
+        /***
+         各プレイヤーに確認したい麻薬を選択してもらい、該当するプレイヤーがいるならそのプレイヤーを、いないなら誰もいない旨を伝える
+         ***/
+        Log.i(TAG, "checkDrug: ");
 
     }
 }
