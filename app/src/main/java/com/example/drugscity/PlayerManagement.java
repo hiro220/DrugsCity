@@ -24,6 +24,8 @@ public class PlayerManagement {
         /***
          ターン開始時に各プレイヤーが受けたアクションをリセットする
          ***/
+        private PlayerBase playerBase = new PlayerBase();
+        playerBase.actionReset();
         Log.i(TAG, "actionReset: ");
     }
     
