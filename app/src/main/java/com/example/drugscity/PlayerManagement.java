@@ -20,11 +20,14 @@ public class PlayerManagement {
     //役職管理のインスタンス
     private DrugsManagement drug = new DrugsManagement();
 
+    //CPUの
+    private playerBase[] playerData = new playerBase[];
+
     public void actionReset(){
         /***
          ターン開始時に各プレイヤーが受けたアクションをリセットする
          ***/
-        private PlayerBase playerBase = new PlayerBase();
+
         playerBase.actionReset();
         Log.i(TAG, "actionReset: ");
     }
@@ -41,6 +44,8 @@ public class PlayerManagement {
         /***
          各プレイヤーに行うアクションを決定するように通知する
          ***/
+
+        //
         Log.i(TAG, "decideAllAction: ");
 
     }
@@ -53,12 +58,28 @@ public class PlayerManagement {
 
     }
 
-    public void isGameEnd(){
+    public boolean isGameEnd(ArrayList<PlayerBase> playerList){
         /***
          現時点で残っているプレイヤーの人数を確かめ、1人のみならTrueをリターンする。 そうでないならFalseをリターンする
          ***/
-        Log.i(TAG, "isGameEnd: ");
+        //脱落したプレイヤーの数
+        int deadPlayerNum = 0;
 
+        for(int i = 0; i < playerList.size(); i++) {
+            //脱落したプレイヤーの数を数える
+            if(playerList.get(i).isDead()){
+                deadPlayerNum++;
+            }
+        }
+
+        //プレイヤーが残り一人かどうか確認する
+        if(playerList.size() - deadPlayerNum == 1){
+            return true;
+        }else{
+            return false;
+        }
+
+        Log.i(TAG, "isGameEnd: ");
     }
 
     public void checkDrug(){
