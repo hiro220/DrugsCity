@@ -20,7 +20,7 @@ public class PlayerManagement {
     //役職管理のインスタンス
     private DrugsManagement drug = new DrugsManagement();
 
-    //CPUの
+    //ゲームに参加してるプレイヤー情報のインスタンス
     private playerBase[] playerData = new playerBase[];
 
     public void actionReset(){
@@ -28,8 +28,9 @@ public class PlayerManagement {
          ターン開始時に各プレイヤーが受けたアクションをリセットする
          ***/
 
-        playerBase.actionReset();
         Log.i(TAG, "actionReset: ");
+
+        playerBase.actionReset();
     }
     
     public void decideActionSequence(){
@@ -37,7 +38,13 @@ public class PlayerManagement {
          アクションの処理順序を決定し、各プレイヤーに自分のアクション処理順序を伝える
          ***/
         Log.i(TAG, "decideActionSequence: ");
-    
+
+        //各プレイヤーの行動順を取得する
+        playerNum = player.setTurn();
+        cpu1Num = cpu1.setTurn();
+        cpu2Num = cpu2.setTurn();
+        cpu3Num = cpu3.setTurn();
+        cpu4Num = cpu4.setTurn();
     }
 
     public void decideAllAction(){
@@ -45,7 +52,6 @@ public class PlayerManagement {
          各プレイヤーに行うアクションを決定するように通知する
          ***/
 
-        //
         Log.i(TAG, "decideAllAction: ");
 
     }
@@ -58,28 +64,28 @@ public class PlayerManagement {
 
     }
 
-    public boolean isGameEnd(ArrayList<PlayerBase> playerList){
+    public boolean isGameEnd(){
         /***
          現時点で残っているプレイヤーの人数を確かめ、1人のみならTrueをリターンする。 そうでないならFalseをリターンする
          ***/
+        Log.i(TAG, "isGameEnd: ");
+
         //脱落したプレイヤーの数
         int deadPlayerNum = 0;
 
-        for(int i = 0; i < playerList.size(); i++) {
+        for(int i = 0; i < playerData.size(); i++) {
             //脱落したプレイヤーの数を数える
-            if(playerList.get(i).isDead()){
+            if(playerData.get(i).isDead()){
                 deadPlayerNum++;
             }
         }
 
         //プレイヤーが残り一人かどうか確認する
-        if(playerList.size() - deadPlayerNum == 1){
+        if(playerData.size() - deadPlayerNum == 1){
             return true;
         }else{
             return false;
         }
-
-        Log.i(TAG, "isGameEnd: ");
     }
 
     public void checkDrug(){
@@ -88,5 +94,11 @@ public class PlayerManagement {
          ***/
         Log.i(TAG, "checkDrug: ");
 
+        for(int i = 0; i < playerData.size(); i++) {
+            //脱落したプレイヤーの数を数える
+            if(playerData.getDrug){
+                deadPlayerNum++;
+            }
+        }
     }
 }
